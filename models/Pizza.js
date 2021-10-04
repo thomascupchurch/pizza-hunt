@@ -18,7 +18,8 @@ const PizzaSchema = new Schema({
   toppings: [],
   comments: [
     {
-      type: String,
+      type: Schema.Types.ObjectId,
+      ref: "Comment",
     },
   ],
 });
