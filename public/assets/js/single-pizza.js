@@ -1,4 +1,4 @@
-const { response } = require("express");
+// const { response } = require("express");
 
 const $backBtn = document.querySelector("#back-btn");
 const $pizzaName = document.querySelector("#pizza-name");
@@ -133,7 +133,7 @@ function handleNewCommentSubmit(event) {
     method: "POST",
     headers: {
       Accept: "application/json",
-      "Content-type": "application/json",
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(formData),
   })
