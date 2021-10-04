@@ -22,10 +22,8 @@ const ReplySchema = new Schema(
   },
   {
     toJSON: {
-      virtuals: true,
       getters: true,
     },
-    id: false,
   }
 );
 
@@ -52,6 +50,10 @@ const CommentSchema = new Schema(
     id: false,
   }
 );
+
+CommentSchema.virtual("replyCount").get(function () {
+  return this.replies.length;
+});
 
 const Comment = model("Comment", CommentSchema);
 
