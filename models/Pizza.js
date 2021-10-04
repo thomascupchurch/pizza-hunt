@@ -29,6 +29,7 @@ const PizzaSchema = new Schema(
   {
     toJSON: {
       virtuals: true,
+      getters: true,
     },
     id: false,
   }
